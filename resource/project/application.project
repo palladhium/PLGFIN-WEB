@@ -1,0 +1,49 @@
+# Plataforma de Lançamento (Financeiro)
+
+	+ Tecnologias
+
+		> NodeJS					v6.10.2
+		> AngularJS					v1.6.6
+		> MongoDB
+		> Express
+
+	+ Funcionalidades
+
+	+ Versionamento
+
+		URL:				https://github.com/palladhium/PLGFIN
+		USER:				Palladhium
+		EMAIL: 				palladhium@outlook.com.br
+
+	+ Comandos
+
+		npm init -y
+
+		-- Buildar (gerar arquivos) e subir com GulpWebServer
+		npm run dev
+
+		-- Baixar depedências
+		npm i
+
+		-- Buildar (gerar arquivos), mas não executa o servidor
+		npm run production
+
+		npm install angular@1.6.6
+
+		npm install admin-lte@2.3.11
+
+		npm install angular@1.6.6
+
+		-- Versionar no Github
+		git init
+		git add *
+		git commit -m "MASTER"
+		git remote add origin https://github.com/palladhium/PLGFIN.git
+		git push -u origin master
+
+	+ Demandas (PLGFIN-<MINUTO><HORA><ANO><MES><DIA><SEGUNDO>)
+
+		> PLGFIN-06152020092706
+
+			- Implementar estrutura básica da aplicação
+			- Implementar funcionalidade de Monitoramento (frontend)

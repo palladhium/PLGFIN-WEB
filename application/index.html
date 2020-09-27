@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PlataformaLancamentoGerenciadorFinanceiroModule">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/application.min.css" />
+    <link rel="stylesheet" href="style/dependecy.min.css" />
+    <title>PLGFIN</title>
+</head>
+<body class="skin-blue-light fixed sidebar-mini">
+
+    <div class="wrapper">
+        <header class="main-header" ng-include="'/template/pageHeader.html'"></header>
+        <aside class="main-sidebar" ng-include="'/template/pageMenu.html'"></aside>
+        <div class="content-wrapper" ui-view></div>
+        <footer class="main-footer" ng-include="'/template/pageFooter.html'"></footer>
+    </div>
+
+    <script src="script/dependecy.min.js"></script>
+    <script src="script/application.min.js"></script>
+</body>
+</html>
