@@ -1,0 +1,4 @@
+node_modules
+dependecy/build
+*.log
+package-lock.json
