@@ -3,7 +3,7 @@
     angular.module("PlataformaLancamentoGerenciadorFinanceiroModule").controller("monitoramentoController", [
         "$http",
         monitoramentoController
-    ])
+    ]);
 
     function monitoramentoController($http) {
         const vm = this;
