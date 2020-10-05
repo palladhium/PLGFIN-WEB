@@ -1,16 +1,11 @@
 <div role="form">
     <div class="box-body">
-        <div class="row">
-            <div class="col-xs-12 col-sm-4">
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input id="nome" placeholder="Informe o Nome" class="form-control"/>
-                </div>
-            </div>
-        </div>
+        <input-formulario-component id="nome" grid="12 12 12" label="Nome" placeholder="Informe o Nome" model="cicloPagamento.cicloPagamentoModel.nome"></input-formulario-component>
+        <input-formulario-component id="mes" type="number" grid="12 12 12" label="Mês" placeholder="Informe o Mês" model="cicloPagamento.cicloPagamentoModel.mes"></input-formulario-component>
+        <input-formulario-component id="ano" type="number" grid="12 12 12" label="Ano" placeholder="Informe o Ano" model="cicloPagamento.cicloPagamentoModel.ano"></input-formulario-component>
     </div>
     <div class="box-footer">
-        <button class="btn btn-primary">Cadastrar</button>
+        <button class="btn btn-primary" ng-click="cicloPagamento.save(cicloPagamento.cicloPagamentoModel)">Cadastrar</button>
         <button class="btn btn-info">Alterar</button>
         <button class="btn btn-danger">Excluir</button>
         <button class="btn btn-default">Cancelar</button>
