@@ -1,13 +1,13 @@
 <div role="form">
     <div class="box-body">
-        <input-formulario-component id="nome" grid="12 12 12" label="Nome" placeholder="Informe o Nome" model="cicloPagamento.cicloPagamentoModel.nome"></input-formulario-component>
-        <input-formulario-component id="mes" type="number" grid="12 12 12" label="Mês" placeholder="Informe o Mês" model="cicloPagamento.cicloPagamentoModel.mes"></input-formulario-component>
-        <input-formulario-component id="ano" type="number" grid="12 12 12" label="Ano" placeholder="Informe o Ano" model="cicloPagamento.cicloPagamentoModel.ano"></input-formulario-component>
+        <input-formulario-component id="nome" grid="12 12 12" label="Nome" placeholder="Informe o Nome" model="cicloPagamento.cicloPagamentoModel.nome" is-readonly="cicloPagamentoController_.isTableDeletar"></input-formulario-component>
+        <input-formulario-component id="mes" type="number" grid="12 12 12" label="Mês" placeholder="Informe o Mês" model="cicloPagamento.cicloPagamentoModel.mes" is-readonly="cicloPagamentoController_.isTableDeletar"></input-formulario-component>
+        <input-formulario-component id="ano" type="number" grid="12 12 12" label="Ano" placeholder="Informe o Ano" model="cicloPagamento.cicloPagamentoModel.ano" is-readonly="cicloPagamentoController_.isTableDeletar"></input-formulario-component>
     </div>
     <div class="box-footer">
-        <button class="btn btn-primary" ng-click="cicloPagamentoController_.save(cicloPagamento.cicloPagamentoModel)">Cadastrar</button>
-        <button class="btn btn-info">Alterar</button>
-        <button class="btn btn-danger">Excluir</button>
-        <button class="btn btn-default">Cancelar</button>
+        <button class="btn btn-primary" ng-click="cicloPagamentoController_.save(cicloPagamento.cicloPagamentoModel)" ng-if="cicloPagamentoController_.isTableCadastrar">Cadastrar</button>
+        <button class="btn btn-info" ng-if="cicloPagamentoController_.isTableAtualizar">Alterar</button>
+        <button ng-click="cicloPagamentoController_.removerCicloPagamento(cicloPagamento.cicloPagamentoModel)" class="btn btn-danger">Excluir</button>
+        <button ng-click="cicloPagamentoController_.refresh()" class="btn btn-default">Cancelar</button>
     </div>
 </div>

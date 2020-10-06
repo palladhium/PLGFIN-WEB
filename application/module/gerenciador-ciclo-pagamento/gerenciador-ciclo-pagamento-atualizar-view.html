@@ -1,1 +1,13 @@
-Atualizar...
+<div role="form">
+    <div class="box-body">
+        <input-formulario-component id="nome" grid="12 12 12" label="Nome" placeholder="Informe o Nome" model="cicloPagamentoController_.cicloPagamentoModel.nome"></input-formulario-component>
+        <input-formulario-component id="mes" type="number" grid="12 12 12" label="Mês" placeholder="Informe o Mês" model="cicloPagamentoController_.cicloPagamentoModel.mes"></input-formulario-component>
+        <input-formulario-component id="ano" type="number" grid="12 12 12" label="Ano" placeholder="Informe o Ano" model="cicloPagamentoController_.cicloPagamentoModel.ano"></input-formulario-component>
+    </div>
+    <div class="box-footer">
+        <button class="btn btn-primary" ng-click="cicloPagamentoController_.save(cicloPagamento.cicloPagamentoModel)" ng-if="cicloPagamentoController_.isTableCadastrar">Cadastrar</button>
+        <button class="btn btn-info" ng-click="cicloPagamentoController_.atualizarCicloPagamento(cicloPagamentoController_.cicloPagamentoModel)" ng-if="cicloPagamentoController_.isTableAtualizar">Alterar</button>
+        <button class="btn btn-danger" ng-if="cicloPagamentoController_.isTableDeletar">Excluir</button>
+        <button class="btn btn-default">Cancelar</button>
+    </div>
+</div>

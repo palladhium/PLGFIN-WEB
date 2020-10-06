@@ -3,35 +3,21 @@
 <section class="content">
 
     <div class="nav-tabs-custom" ng-controller="cicloPagamentoController as cicloPagamentoController_">
+
         <ul class="nav nav-tabs">
-            <li>
-                <a href data-target="#tabList" data-toggle="tab">
-                    <i class="fa fa-bars"></i> Lista
-                </a>
-            </li>
-            <li>
-                <a href data-target="#tabCreate" data-toggle="tab">
-                    <i class="fa fa-plus"></i> Cadastrar
-                </a>
-            </li>
-            <li>
-                <a href data-target="#tabUpdate" data-toggle="tab">
-                    <i class="fa fa-pencil"></i> Atualizar
-                </a>
-            </li>
-            <li>
-                <a href data-target="#tabDelete" data-toggle="tab">
-                    <i class="fa fa-trash"></i> Excluir
-                </a>
-            </li>
+            <li ng-if="cicloPagamentoController_.isTableListar" ng-class="{active: cicloPagamentoController_.isTableListar}"><a href data-target="#tabList" data-toggle="tab"><i class="fa fa-bars"></i> Listar </a></li>
+            <li ng-if="cicloPagamentoController_.isTableCadastrar" ng-class="false"><a href data-target="#tabCreate" data-toggle="tab"><i class="fa fa-plus"></i> Cadastrar </a></li>
+            <li ng-if="cicloPagamentoController_.isTableAtualizar" ng-class="{active: cicloPagamentoController_.isTableAtualizar}"><a href data-target="#tabUpdate" data-toggle="tab"><i class="fa fa-pencil"></i> Atualizar </a></li>
+            <li ng-if="cicloPagamentoController_.isTableDeletar" ng-class="{active: cicloPagamentoController_.isTableDeletar}"><a href data-target="#tabDelete" data-toggle="tab"><i class="fa fa-trash"></i> Excluir </a></li>
         </ul>
 
         <div class="tab-content">
-            <div id="tabList" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-listar-view.html'"></div>
-            <div id="tabCreate" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-cadastrar-view.html'"></div>
-            <div id="tabUpdate" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-atualizar-view.html'"></div>
-            <div id="tabDelete" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-deletar-view.html'"></div>
+            <div id="tabList" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-listar-view.html'" ng-class="{active: cicloPagamentoController_.isTableListar}"></div>
+            <div id="tabCreate" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-cadastrar-view.html'" ng-class="{active: cicloPagamentoController_.isTableCadastrar}"></div>
+            <div id="tabUpdate" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-atualizar-view.html'" ng-class="{active: cicloPagamentoController_.isTableAtualizar}"></div>
+            <div id="tabDelete" class="tab-pane" ng-include="'/module/gerenciador-ciclo-pagamento/gerenciador-ciclo-pagamento-deletar-view.html'" ng-class="{active: cicloPagamentoController_.isTableDeletar}"></div>
         </div>
+
     </div>
 
 </section>
